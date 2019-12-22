@@ -1,0 +1,264 @@
+    <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Главная | aminosan.com</title>
+		<link rel="stylesheet" href="style/font-awesome.min.css?ver=5.2.0">
+		<link rel="stylesheet" href="style/bootstrap.min.css?ver=4.1.3">
+		<link rel="stylesheet" href="style/mdb.min.css?ver4.5.11">
+		<link rel="stylesheet" href="style/style.css?ver=1.0.0">
+	</head>
+	<body>
+		<header class="container-fluid p-0">
+			<nav class="navbar special-color-dark d-md-none">
+				<a href="index.html"><img src="img/book_store.png" height="15" alt="Logo"></a>
+				<button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="text-white"><i class="fas fa-bars fa-1x"></i></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+					<ul class="navbar-nav mr-auto">
+					</ul>
+				</div>
+			</nav>
+			<div class="px-0 py-1 special-color-dark d-none d-md-block">
+				<div class="container">
+					<div class="row">
+						<div class="order-sm-1 col-sm-9 col-md-3 col-xl-2 pt-2">
+							<a href="index.html"><img src="img/book_store.png" height="50" alt="Logo"></a>
+						</div>
+						<div class="order-sm-3 order-md-2 col-md-6 col-lg-7 col-xl-8">
+							<form class="form-inline my-1 float-right" name="search_form">
+								<div class="md-form form-sm my-0">
+									<input class="form-control form-control-sm mr-sm-2 mb-0" name="q" type="text" placeholder="Поиск">
+								</div>
+								<button class="btn btn-outline-white btn-sm my-0 mr-0" type="submit">Искать</button>
+							</form>
+						</div>
+						<div class="order-sm-2 order-md-3 col-sm-3 col-md-3 col-lg-2 d-flex justify-content-center">
+							<a class="btn-floating btn-sm special-color-dark menu-tab my-0" href="#cart" onclick="linkClicked(this);"><i class="fa fa-shopping-cart"></i></a>
+							<a class="btn-floating btn-sm special-color-dark my-0" href="#profile" onclick="linkClicked(this);"><i class="fa fa-user"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="container-fluid special-color d-none d-md-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 d-flex justify-content-between flex-wrap my-3" id="header_menu">
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="container text-center my-4 menu-tab-item" id="home">
+				<h3 class="h1-responsive font-weight-bold text-center my-4">Рекомендации</h3>
+				<p class="grey-text text-center w-responsive mx-auto mb-4"> На нашем сайте вы можете ознакомиться и преобрести литературу
+						как на русском, украинском, так и английском языках. Выбор у нас достаточно широкий, так что любой желающий найдет, что почитать.
+					</p>
+				<div class="row" id="home_recomendation">
+				</div>
+				<h3 class="h1-responsive font-weight-bold text-center my-4">Последние поступления</h3>
+				<p class="grey-text text-center w-responsive mx-auto mb-4"> 
+					</p>
+				<div class="row" id="home_last">
+				</div>
+			</section>
+			<section class="container menu-tab-item" id="genre">
+				<div class="row">
+					<div class="col-12" id="main_genre_subgenres">
+					</div>
+				</div>
+				<h3 class="h1-responsive font-weight-bold text-center my-4">Рекомендации</h3>
+				<div class="row" id="main_genre_recomendation">
+				</div>
+				<h3 class="h1-responsive font-weight-bold text-center my-4">Последние поступления</h3>
+				<div class="row" id="main_genre_last">
+				</div>
+			</section>
+			<section class="container menu-tab-item pt-4 pb-2" id="book">
+			</section>
+			<section class="container menu-tab-item pt-4 pb-2" id="search">
+				<div class="row mb-4">
+					<div class="col-12">
+						<h2 class="h2 text-center">Результаты поиска</h3>
+					</div>
+				</div>
+				<div class="row" id="main_search_content">
+				</div>
+			</section>
+			<section class="container menu-tab-item pt-4 pb-2" id="cart">
+				<div class="row mb-4">
+					<div class="col-12">
+						<h2 class="h2 text-center">Корзина</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-8 offset-md-2" id="main_cart_content">
+					</div>
+				</div>
+				<div class="row my-4">
+					<div class="col-8 offset-2 d-flex justify-content-center">
+						<button class="btn btn-success" id="main_cart_checkout">Оформить покупку</button>
+					</div>
+				</div>
+			</section>
+			<section class="container menu-tab-item pt-4 pb-2" id="profile">
+				<div class="row mb-4">
+					<div class="col-12">
+						<h2 class="h2 text-center">Профиль</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-8 offset-md-2">
+						<p class="font-weight-bold">E-mail: <span class="font-weight-normal" id="main_profile_email"></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-8 offset-md-2">
+						<p class="font-weight-bold">Сменить пароль:</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-8 offset-md-2">
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix grey-text"></i>
+							<input type="password" id="main_profile_oldpass" class="form-control">
+							<label for="main_profile_oldpass">Старый пароль</label>
+						</div>
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix grey-text"></i>
+							<input type="password" id="main_profile_newpass" class="form-control">
+							<label for="main_profile_newpass">Новый пароль</label>
+						</div>
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix grey-text"></i>
+							<input type="password" id="main_profile_newpass_rep" class="form-control">
+							<label for="main_profile_newpass_rep">Повторите новый пароль</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8 offset-2">
+						<button class="btn special-color" id="main_profile_save">Сохранить</button>
+					</div>
+				</div>
+			</section>
+			<div class="modal fade" id="main_cart_modal_checkout">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Оформление покупки</h4>
+						</div>
+						<div class="modal-body mx-3 py-0">
+							<div class="md-form form-sm mb-2">
+								<i class="fa fa-envelope prefix grey-text"></i>
+								<input type="text" id="form_checkout_name" class="form-control">
+								<label for="form_checkout_name">Ваше имя</label>
+							</div>
+							<div class="md-form form-sm">
+								<i class="fa fa-lock prefix grey-text"></i>
+								<input type="tel" id="form_checkout_tel" class="form-control"> 
+								<label for="form_checkout_tel">Номер телефона</label>
+							</div>
+						</div>
+						<div class="modal-footer d-flex justify-content-center">
+							<button class="btn special-color">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="main_profile_modal_login">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Авторизация</h4>
+						</div>
+						<div class="modal-body mx-3 py-0">
+							<div class="md-form form-sm mb-2">
+								<i class="fa fa-envelope prefix grey-text"></i>
+								<input type="email" id="form_login_email" class="form-control">
+								<label for="form_login_email">E-mail</label>
+							</div>
+							<div class="md-form form-sm">
+								<i class="fa fa-lock prefix grey-text"></i>
+								<input type="password" id="form_login_password" class="form-control">
+								<label for="form_login_password">Пароль</label>
+							</div>
+							<div class="form-check md-form form-sm mt-0 mb-3 pl-0">
+								<input type="checkbox" id="form_login_remember" class="form-check-input">
+								<label for="form_login_remember">Запомнить меня</label>
+							</div>
+							<div class="options text-center">
+								<p class="pt-2">Нет аккаунта? <a onclick="userReg();" class="blue-text">Регистрация</a></p>
+							</div>
+						</div>
+						<div class="modal-footer d-flex justify-content-center">
+							<button class="btn special-color">Войти</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="main_profile_modal_reg">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Регистрация</h4>
+						</div>
+						<div class="modal-body mx-3 py-0">
+							<div class="md-form form-sm mb-2">
+								<i class="fa fa-envelope prefix grey-text"></i>
+								<input type="email" id="form_reg_email" class="form-control">
+								<label for="form_reg_email">E-mail</label>
+							</div>
+							<div class="md-form form-sm">
+								<i class="fa fa-lock prefix grey-text"></i>
+								<input type="password" id="form_reg_password" class="form-control">
+								<label for="form_reg_password">Пароль</label>
+							</div>
+							<div class="md-form form-sm">
+								<i class="fa fa-lock prefix grey-text"></i>
+								<input type="password" id="form_reg_password_rep" class="form-control">
+								<label for="form_reg_password_rep">Повторите пароль</label>
+							</div>
+							<div class="form-check md-form form-sm mt-0 mb-3 pl-0">
+								<input type="checkbox" id="form_reg_remember" class="form-check-input">
+								<label for="form_reg_remember">Запомнить меня</label>
+							</div>
+							<div class="options text-center">
+								<p class="pt-2">Есть аккаунт? <a onclick="userLogin();" class="blue-text">Авторизация</a></p>
+							</div>
+						</div>
+						<div class="modal-footer d-flex justify-content-center">
+							<button class="btn special-color">Зарегистрироваться</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer font-small special-color pt-4 mt-2">
+			<div class="container-fluid container text-center text-md-left">
+				<div class="row" id="footer_menu">
+					<hr class="clearfix w-100 d-md-none pb-3">
+				</div>
+			</div>
+			<div class="footer-copyright text-center py-3">© 2018
+				<a href="index.html"> aminosan.com</a>
+			</div>
+		</footer>
+		<script type="text/javascript" src="script/jquery.min.js?ver=3.3.1"></script>
+		<script type="text/javascript" src="script/popper.min.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/bootstrap.min.js?ver=4.1.3"></script>
+		<script type="text/javascript" src="script/mdb.min.js?ver=4.5.11"></script>
+		<script type="text/javascript" src="script/cookie.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/server.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/auth.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/main.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/ontabswitched.js?ver=1.0.0"></script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript" src="script/tabs.js?ver=1.0.0"></script>
+		<script type="text/javascript" src="script/cart.js?ver=1.0.0"></script>
+	</body>
+</html>

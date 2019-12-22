@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<winginx>
+  <project>
+    <name>kursach.lo</name>
+    <url>http://kursach.lo/</url>
+    <root>home/kursach.lo</root>
+  </project>
+</winginx>

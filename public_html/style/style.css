@@ -1,0 +1,26 @@
+header li {
+    font-size: 0.75rem;
+}
+
+.card-img-top {
+    height: 12rem;
+    width: unset;
+}
+
+footer hr {
+    border-color: white;
+    flex: 0 0 auto;
+}
+
+.card-body h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input.empty {
+    border-bottom-color: red !important;
+}
+white {
+    color: white;
+}
