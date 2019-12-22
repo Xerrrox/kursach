@@ -102,7 +102,7 @@
             return Books::rand($columns, $where, $join);
         }
 
-        public function getBookInfo() { //вся информация касательно книги
+        public function getBookInfo() { //вся информация касательно одной книги
             $id = intval($GLOBALS['data']['book']);
             $columns = [
                 "books.id",
