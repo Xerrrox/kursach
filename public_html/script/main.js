@@ -47,8 +47,8 @@ $(document).ready(function() {
 });
 
 function appendBook(root, book) { //формирую карточку книги, отдельная функция чтобы постоянно не писать
-    var html = '<div class="col-sm-6 col-md-4 col-lg-3"><div class="card align-items-center px-4 pt-4 my-2"><div class="view overlay"><img src="img/books/'+book.cover+
-                '" class="card-img-top" alt="'+book.title+
+    var html = '<div class="col-sm-6 col-md-4 col-lg-3"><div class="card align-items-center px-4 pt-4 my-2"><div class="view overlay"><img src="img/books/'+book.id+
+                '.jpg" class="card-img-top" alt="'+book.title+
                 '"><a class="menu-tab" menu-tab-title="'+book.title+
                 '" onclick="linkClicked(this);" onclick="linkClicked(this);" href="#book_'+book.id+
                 '"><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center px-0 w-100"><h6 class="grey-text" title="'+book.author_name+
